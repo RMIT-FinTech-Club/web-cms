@@ -5,10 +5,10 @@ const cleanItem = (item) => {
     delete item.publishedAt;
     delete item.attributes;
 };
-const populate = (ctx, populate) => {
+const populate = (ctx, _populate) => {
     ctx.query = {
         ...ctx.query,
-        populate,
+        populate: _populate,
     };
 };
 module.exports = {
