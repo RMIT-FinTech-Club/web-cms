@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 /**
  * executive service
  */
 
-const { createCoreService } = require('@strapi/strapi').factories;
+const { createCoreService } = require("@strapi/strapi").factories;
 
-module.exports = createCoreService('api::executive.executive');
+module.exports = createCoreService("api::executive.executive");
