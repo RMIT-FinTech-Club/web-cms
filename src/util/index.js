@@ -11,6 +11,12 @@ const populate = (ctx, _populate) => {
         populate: _populate,
     };
 };
+const sort = (ctx, _sort) => {
+    ctx.query = {
+        ...ctx.query,
+        sort: _sort,
+    };
+};
 
 const select = (item, key, field) => {
     const a = item.attributes;
@@ -19,6 +25,7 @@ const select = (item, key, field) => {
 
 module.exports = {
     populate,
+    sort,
     cleanItem,
     select,
 };
