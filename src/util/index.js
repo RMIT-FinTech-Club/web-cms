@@ -1,5 +1,5 @@
 const cleanItem = (item) => {
-    for (const a in item.attributes) item[a] = item.attributes[a];
+    Object.assign(item, item.attributes);
     delete item.createdAt;
     delete item.updatedAt;
     delete item.publishedAt;
@@ -11,7 +11,14 @@ const populate = (ctx, _populate) => {
         populate: _populate,
     };
 };
+
+const select = (item, key, field) => {
+    const a = item.attributes;
+    a[key] = a[key].data?.attributes[field] ?? null;
+};
+
 module.exports = {
     populate,
     cleanItem,
+    select,
 };

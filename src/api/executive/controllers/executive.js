@@ -1,6 +1,6 @@
 "use strict";
 
-const { populate, cleanItem } = require("../../../util");
+const { populate, cleanItem, select } = require("../../../util");
 
 /**
  * executive controller
@@ -13,9 +13,8 @@ module.exports = createCoreController("api::executive.executive", ({ strapi }) =
         populate(ctx, ["avatar", "department"]);
         const { data } = await super.find(ctx);
         data.forEach((item) => {
-            const a = item.attributes;
-            if (a.avatar) a.avatar = a.avatar.data.attributes.url;
-            if (a.department) a.department = a.department.data.attributes.name;
+            select(item, "avatar", "url");
+            select(item, "department", "name");
             cleanItem(item);
         });
         return data;

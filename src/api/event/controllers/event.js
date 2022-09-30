@@ -1,14 +1,13 @@
 "use strict";
 
-const { populate, cleanItem, select } = require("../../../util");
-
 /**
- * department controller
+ * event controller
  */
 
+const { populate, cleanItem, select } = require("../../../util");
 const { createCoreController } = require("@strapi/strapi").factories;
 
-module.exports = createCoreController("api::department.department", ({ strapi }) => ({
+module.exports = createCoreController("api::event.event", ({ strapi }) => ({
     async find(ctx) {
         populate(ctx, ["cover"]);
         const { data } = await super.find(ctx);
