@@ -43,6 +43,9 @@
     },
     "quote": {
       "type": "text"
+    },
+    "index": {
+      "type": "integer"
     }
   }
 }
