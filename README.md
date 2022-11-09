@@ -41,9 +41,19 @@ psql INPORT_POSTGRES_URI < backup.sql
 
 https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/
 
-### Install Docker
+### Install Docker & Docker Compose
 
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+
+https://docs.docker.com/compose/install/linux/#install-the-plugin-manually
+
+### Install NGINX
+
+https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
+
+#### Strapi NGINX setup
+
+https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment/optional-software/nginx-proxy.html#strapi-server
 
 ### Deploy Strapi
 
